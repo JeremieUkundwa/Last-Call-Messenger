@@ -36,7 +36,7 @@ border: 2px solid #192646;  /* creates padding around scroll thumb */
 
 .videos{
     float: right;
-    margin-right: 500px;
+    margin-right: 20px;
     width: 350px;
     height: 480px;
     background-color: #FAF6F6;
@@ -48,11 +48,6 @@ border: 2px solid #192646;  /* creates padding around scroll thumb */
     height: 100px;
 }
 
-label{
-    font-size: 12px;
-    float: right;
-    clear: both;
-}
 .twetter{
     margin-top: 65px;
 }
