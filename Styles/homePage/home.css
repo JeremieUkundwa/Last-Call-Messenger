@@ -38,11 +38,37 @@ main {
   color: #4f3f96;
 }
 
-.middle-image-carousel {
-  width: 630px;
-  /* height: 20vw; */
+.middle-content {
+  width: 38vw;
 }
+.middle-content p strong{
+  margin-top: 20px;
+  text-align: center;
+}
+.middle-content p{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
 
+  color: #000000;
+}
+.middle-content ol li{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  /* display: flex; */
+  /* align-items: center; */
+  text-align: center;
+
+  color: #000000;
+}
 .main-grid {
   display: grid;
   margin-left: 6.5vw;
