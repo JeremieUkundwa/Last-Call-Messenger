@@ -57,7 +57,7 @@
     color: black;
 }
 
-button{
+.card-body button{
     border-radius: 10px;
     font-family: "Open Sans";
     font-style: normal;

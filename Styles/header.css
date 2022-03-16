@@ -21,7 +21,7 @@
   }
   
   .nav-bar nav {
-    margin-left: 30%;
+    margin-left: 25%;
   }
   
   .nav-bar nav .nav-link-header {
@@ -40,3 +40,31 @@
     color: #ffb72b;
   }
   
+  .nav-bar .search-container {
+    float: right;
+  }
+  
+  .nav-bar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .nav-bar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-bar .search-container button:hover {
+    background: #ccc;
+  }
+  .nav-bar form{
+    margin-top: -2vw;
+  }
