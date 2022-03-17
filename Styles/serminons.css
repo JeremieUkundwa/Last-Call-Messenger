@@ -1,0 +1,55 @@
+
+.row-post {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr;
+  margin-left: 5vw;
+  padding-top: 25px;
+  margin-bottom: 30px;
+}
+.sermon-title{
+    text-align: center;
+    font-size: 24px;
+}
+.sermon-section {
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+}
+.comment-section {
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 10px 10px;
+  height: 45vh;
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.sermon-content{
+    text-align: center;
+}
+.comment-section h3 {
+  text-align: center;
+}
+.comment-section .comment-div {
+  margin-left: 30px;
+}
+
+.comment-section .comment-div input {
+  width: 334px;
+  height: 39px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.comment-section .comment-div textarea {
+  width: 337px;
+  height: 147px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
