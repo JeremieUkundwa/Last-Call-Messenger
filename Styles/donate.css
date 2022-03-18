@@ -23,7 +23,7 @@
 .inner-main-body-section {
   margin-left: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .inner-main-body-section img {
   width: 200px;
