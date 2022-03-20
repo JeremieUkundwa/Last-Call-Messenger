@@ -22,6 +22,9 @@
   font-size: 25px;
   color: #fff;
 }
+.social-media nav a:hover{
+  color: #ffb72b;
+}
 .publication-style {
   float: left;
   margin-left: 10vw;
@@ -35,7 +38,9 @@
   margin-left: 50px;
   text-decoration: none;
 }
-
+.publication-style nav a:hover{
+  color: #ffb72b;
+}
 .contact-map-style {
   float: right;
   margin-top: -30px;
@@ -50,6 +55,9 @@
   color: #fff;
 
   text-decoration: none;
+}
+.contact-map-style nav a:hover{
+  color: #ffb72b;
 }
 .copright-style p {
   color: #fff;
