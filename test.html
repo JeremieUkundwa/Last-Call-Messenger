@@ -1,47 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Responsive Navbar | CodingNepal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Styles/header.css" />
-    <link rel="stylesheet" href="./Styles/donate.css" />
-    <link rel="stylesheet" href="./Styles/serminons.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="./Styles/footer.css" />
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css" />
-
-    <title>Sermony</title>
+    <link rel="stylesheet" href="./Styles/header.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: montserrat;
+      }
+      nav {
+        background: #0082e6;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo {
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul {
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a {
+        color: white;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+      }
+      a.active,
+      a:hover {
+        background: #1b9bff;
+        transition: 0.5s;
+      }
+      .checkbtn {
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check {
+        display: none;
+      }
+      @media (max-width: 952px) {
+        
+        nav ul li a {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 858px) {
+        .checkbtn {
+          display: block;
+        }
+        ul {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all 0.5s;
+        }
+        nav ul li {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a {
+          font-size: 20px;
+        }
+        a:hover,
+        a.active {
+          background: none;
+          color: #0082e6;
+        }
+        #check:checked ~ ul {
+          left: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
       <div class="nav-bar">
-        <div class="logo">
-          <a href="./index.html"
-            ><img class="image-logo" src="./images/logo.jpeg" alt="logo"
-          /></a>
-        </div>
         <div>
           <nav>
-            <a class="nav-link-header" href="./index.html">Home</a>
-            <a class="nav-link-header" href="./aboutUs.html">About Us</a>
-            <a class="nav-link-header" href="./activites.html"
-              >Activities Of The Ministry</a
-            >
-            <a class="nav-link-header" href="./video.html">Video</a>
-            <a class="nav-link-header" href="./contactUs.html">Contact US</a>
-            <a class="nav-link-header" href="./donate.html">Donate</a>
-            <a
-              class="nav-link-header"
-              style="color: #ffb72b"
-              href="./donate.html"
-              >Sermony</a
-            >
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+              <a href="./index.html"><img class="image-logo" src="./images/logo.jpeg" alt="logo" /></a>
+            </div>
+           <ul>
+            <li>
+              <a
+                class="nav-link-header"
+                style="color: #ffb72b"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="nav-link-header" href="./aboutUs.html">About Us</a>
+            </li>
+            <li>
+              <a class="nav-link-header" href="./activites.html"
+                >Activities Of The Ministry</a
+              >
+            </li>
+            <li><a class="nav-link-header" href="./video.html">Video</a></li>
+            <li>
+              <a class="nav-link-header" href="./contactUs.html">Contact US</a>
+            </li>
+            <li><a class="nav-link-header" href="./donate.html">Donate</a></li>
+           </ul>
           </nav>
         </div>
         <div class="search-container">
@@ -53,236 +152,20 @@
       </div>
     </header>
 
-    <main style="background: #faf6f6">
-      <div id="tabs">
-        <nav>
-          <a
-            href="./sermons.html"
-            style="background-color: #ffb72b; color: black"
-            >Justification By Faith</a
-          >
-          <a href="./sermony-current-event.html">Current Events (Prophecy)</a>
-          <a href="./sermony-temperence.html">Temperence</a>
-        </nav>
-      </div>
-      <div class="introduction">
-        <div class="intro-sermony">
-          <div class="date-bar">
-            <div class="day">17</div>
-            <div>
-              <span class="month">March</span>
-              <span class="year">2022</span>
-            </div>
-            <div class="author-holder">
-              <strong>Author</strong>
-              <span>Jeremie Ukundwa</span>
-            </div>
-            <div class="author-social-media">
-              <a href="https://twitter.com/ukundwa_jeremie" target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a href="mailto:tuyijeremie2019@yahoo.com"
-                ><i class="fa fa-envelope"></i
-              ></a>
-            </div>
-          </div>
-          <div class="sermon-intro-content">
-            <div class="sermon-title">
-              <h3>The Sanctified Life</h3>
-            </div>
-            <div class="sermon-content">
-              <p>
-                <span style="font-weight: 400"
-                  >It's always good to bring a slower friend with you on a hike.
-                  If you happen to come across bears, the whole group doesn't
-                  have to worry. Only the slowest in the group do. That was the
-                  lesson they were about to learn that day.</span
-                >
-              </p>
-              <button>Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr style="margin-left: 30vw;width: 40vw;">
-      <div class="introduction">
-        <div class="intro-sermony">
-          <div class="date-bar">
-            <div class="day">17</div>
-            <div>
-              <span class="month">March</span>
-              <span class="year">2022</span>
-            </div>
-            <div class="author-holder">
-              <strong>Author</strong>
-              <span>Jeremie Ukundwa</span>
-            </div>
-            <div class="author-social-media">
-              <a href="https://twitter.com/ukundwa_jeremie" target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a href="mailto:tuyijeremie2019@yahoo.com"
-                ><i class="fa fa-envelope"></i
-              ></a>
-            </div>
-          </div>
-          <div class="sermon-intro-content">
-            <div class="sermon-title">
-              <h3>The Sanctified Life</h3>
-            </div>
-            <div class="sermon-content">
-              <p>
-                <span style="font-weight: 400"
-                  >It's always good to bring a slower friend with you on a hike.
-                  If you happen to come across bears, the whole group doesn't
-                  have to worry. Only the slowest in the group do. That was the
-                  lesson they were about to learn that day.</span
-                >
-              </p>
-              <button>Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr style="margin-left: 30vw;width: 40vw;">
-      <div class="introduction">
-        <div class="intro-sermony">
-          <div class="date-bar">
-            <div class="day">16</div>
-            <div>
-              <span class="month">March</span>
-              <span class="year">2022</span>
-            </div>
-            <div class="author-holder">
-              <strong>Author</strong>
-              <span>Jeremie Ukundwa</span>
-            </div>
-            <div class="author-social-media">
-              <a href="https://twitter.com/ukundwa_jeremie" target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a href="mailto:tuyijeremie2019@yahoo.com"
-                ><i class="fa fa-envelope"></i
-              ></a>
-            </div>
-          </div>
-          <div class="sermon-intro-content">
-            <div class="sermon-title">
-              <h3>The Sanctified Life</h3>
-            </div>
-            <div class="sermon-content">
-              <p>
-                <span style="font-weight: 400"
-                  >It's always good to bring a slower friend with you on a hike.
-                  If you happen to come across bears, the whole group doesn't
-                  have to worry. Only the slowest in the group do. That was the
-                  lesson they were about to learn that day.</span
-                >
-              </p>
-              <button>Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr style="margin-left: 30vw;width: 40vw;">
-      <div class="introduction">
-        <div class="intro-sermony">
-          <div class="date-bar">
-            <div class="day">15</div>
-            <div>
-              <span class="month">March</span>
-              <span class="year">2022</span>
-            </div>
-            <div class="author-holder">
-              <strong>Author</strong>
-              <span>Jeremie Ukundwa</span>
-            </div>
-            <div class="author-social-media">
-              <a href="https://twitter.com/ukundwa_jeremie" target="_blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
-              <a href="mailto:tuyijeremie2019@yahoo.com"
-                ><i class="fa fa-envelope"></i
-              ></a>
-            </div>
-          </div>
-          <div class="sermon-intro-content">
-            <div class="sermon-title">
-              <h3>The Sanctified Life</h3>
-            </div>
-            <div class="sermon-content">
-              <p>
-                <span style="font-weight: 400"
-                  >It's always good to bring a slower friend with you on a hike.
-                  If you happen to come across bears, the whole group doesn't
-                  have to worry. Only the slowest in the group do. That was the
-                  lesson they were about to learn that day.</span
-                >
-              </p>
-              <button>Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr style="margin-left: 30vw;width: 40vw;">
-
-      
-    </main>
-
-    <footer>
-      <div class="footer-style">
-        <div class="publication-style">
-          <nav>
-            <a href=""><i class="fa fa-archive"></i> Archive</a>
-            <a href=""
-              ><i class="fa fa-book" aria-hidden="true"></i> SOP Books</a
-            >
-          </nav>
-        </div>
-        <div class="social-media">
-          <nav>
-            <a href="https://twitter.com/amateraniro" target="_blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
-            <a href="https://t.me/Lastcallmessages" target="_blank"
-              ><i class="fa fa-telegram"></i
-            ></a>
-            <a href=""><i class="fa fa-instagram" target="_blank"></i></a>
-            <a
-              href="https://www.youtube.com/channel/UCrfUkYxS2sh4Pt-gL7CXBtQ"
-              target="_blank"
-              ><i class="fa fa-youtube"></i
-            ></a>
-            <a href="mailto:onlineamateraniro@gmail.com" target="_blank"
-              ><i class="fa fa-envelope"></i
-            ></a>
-            <a
-              href="https://web.facebook.com/amateraniro.online.9"
-              target="_blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-          </nav>
-        </div>
-        <div class="contact-map-style">
-          <nav>
-            <a href=""> <i class="fa fa-phone"></i> +250 782799851 </a>
-            <a href=""> <i class="fa fa-map-marker"></i> Kigali, Rwanda</a>
-          </nav>
-        </div>
-        <div class="copright-style">
-          <p>2022 - The Last Call Messages all rights reserved</p>
-        </div>
-      </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">DesignX</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <!-- <section></section> -->
   </body>
 </html>
